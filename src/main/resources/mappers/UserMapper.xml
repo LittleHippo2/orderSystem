@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "com.lihao.diancaisystem.dao.UserMapper">
+
+    <select id="selectUser" resultType="com.lihao.diancaisystem.po.User">
+      SELECT  * from user
+    </select>
+    <select id="getUserById" resultType="com.lihao.diancaisystem.po.User">
+      SELECT * FROM user where id = #{id}
+    </select>
+    <select id="getUserByUserName" resultType="com.lihao.diancaisystem.po.User">
+        SELECT * FROM user where name = #{userName}
+    </select>
+</mapper>
